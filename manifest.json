@@ -11,18 +11,18 @@
     "storage"
   ],
   "host_permissions": [
-	"https://ajax.googleapis.com/",
+	  "https://ajax.googleapis.com/",
     "http://localhost/*",
-	"https://open.spotify.com/*"
+	  "https://open.spotify.com/*"
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "icon.png"
+    "default_icon": "/images/icon.png"
   },
   "content_scripts": [
     {
       "matches":[
-          "<all_urls>"
+        "<all_urls>"
       ],
       "js": ["background.js"]
     }
