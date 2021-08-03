@@ -1,0 +1,30 @@
+{
+  "name": "Spotify API Test",
+  "description": "Test",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+	"https://ajax.googleapis.com/",
+    "http://localhost/*",
+	"https://open.spotify.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches":[
+          "<all_urls>"
+      ],
+      "js": ["background.js"]
+    }
+  ]
+}
