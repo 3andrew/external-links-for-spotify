@@ -8,7 +8,8 @@
   },
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "tabs"
   ],
   "host_permissions": [
 	  "https://ajax.googleapis.com/",

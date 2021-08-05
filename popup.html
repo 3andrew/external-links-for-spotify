@@ -3,52 +3,42 @@
 
 <head>
     <title>External links for Spotify</title>
-    <style .image>
-        img {
-            display: block;
-            max-width:256px;
-            max-height:256px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
-    <style .button>
-        button {
-            background-color: #4CAF50; 
-            border: none;
-            color: white;
-            padding: 8px 16px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-        }
-    </style>
+    <link rel="stylesheet" href="popup.css" type="text/css">
 </head>
 
-<body style="min-height: 460px; max-height: 575px;">
-    <div class="image">
-        <img src="/images/icon.PNG" alt="placeholder image">
+<body class="background">
+    <div>
+        <img class="image" src="/images/icon.PNG" alt="placeholder image">
     </div>
 
-    <div> 
-        <h2>Artist - Song Name</h2>
+    <div class="text">
+        <p>Artist - Song Name</p>
     </div>
 
-    <div class="button"> 
-        <button>Genius </button>
-        <button>RYM </button>
-        <button>Last.fm </button>
-        <!-- <form action="https://genius.com">
-            <input type="image" src="/images/genius.PNG"/>
-        </form> -->
-        <a 
-          href="https://genius.com">
-            <img src="/images/genius.png" alt="test">
-            <span style="margin-left:5px;font-size:14px !important;line-height: 1;"><br/></span>
-        </a>
+    <div>
+        <table class="table">
+            <tr>
+                <th>
+                    <a target="_blank" href="https://genius.com">
+                        <img class="icon" src="/images/genius.png" alt="Genius link">
+                    </a>
+                </th>
+                <th>
+                    <a target="_blank" href="https://rateyourmusic.com">
+                        <img class="icon" src="/images/rym.png" alt="RYM link">
+                    </a>
+                </th>
+                <th>
+                    <a target="_blank" href="https://last.fm">
+                        <img class="icon" src="/images/lastfm.png" alt="Lastfm link">
+                    </a>
+                </th>
+            </tr>
+
+        </table>
+
     </div>
+
 </body>
-
 
 </html>

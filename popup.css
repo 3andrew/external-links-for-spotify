@@ -1,0 +1,41 @@
+.background {
+    background: #191414;
+    height: 420px;
+    min-width: 300px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.image {
+    display: block;
+    max-width: 256px;
+    max-height: 256px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+}
