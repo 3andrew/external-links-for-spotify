@@ -1,6 +1,6 @@
 .background {
     background: #191414;
-    height: 420px;
+    min-height: 420px;
     min-width: 300px;
 }
 

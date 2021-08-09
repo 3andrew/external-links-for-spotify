@@ -1,6 +1,6 @@
 {
   "name": "Spotify API Test",
-  "description": "Test",
+  "description": "Gets information about the song and artist currently being played",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
@@ -9,23 +9,16 @@
   "permissions": [
     "activeTab",
     "storage",
-    "tabs"
+    "tabs",
+    "identity",
+    "background"
   ],
   "host_permissions": [
-	  "https://ajax.googleapis.com/",
-    "http://localhost/*",
-	  "https://open.spotify.com/*"
+	  "https://*.spotify.com/*"
   ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": "/images/icon.png"
-  },
-  "content_scripts": [
-    {
-      "matches":[
-        "<all_urls>"
-      ],
-      "js": ["background.js"]
-    }
-  ]
+  }
+
 }
