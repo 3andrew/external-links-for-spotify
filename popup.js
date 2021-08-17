@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const SPOTIFY_CLIENT_ID = encodeURIComponent('1690670a4d4c44b0a0df4ba24facb1e1');
-const SPOTIFY_CLIENT_SECRET = encodeURIComponent('');
 const RESPONSE_TYPE = encodeURIComponent('token');
 const REDIRECT_URI = chrome.identity.getRedirectURL(); 
 const SCOPE = encodeURIComponent('user-read-private user-read-email user-read-playback-state');
