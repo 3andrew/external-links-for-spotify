@@ -1,5 +1,5 @@
 {
-  "name": "Spotify API Test",
+  "name": "External Links for Spotify",
   "description": "Gets information about the song and artist currently being played",
   "version": "1.0",
   "manifest_version": 3,

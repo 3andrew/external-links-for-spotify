@@ -3,11 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const SPOTIFY_CLIENT_ID = encodeURIComponent('1690670a4d4c44b0a0df4ba24facb1e1');
-const SPOTIFY_CLIENT_SECRET = encodeURIComponent('');
 const RESPONSE_TYPE = encodeURIComponent('token');
 const REDIRECT_URI = chrome.identity.getRedirectURL(); 
 const SCOPE = encodeURIComponent('user-read-private user-read-email user-read-playback-state');
-const SHOW_DIALOG = encodeURIComponent('true');
+const SHOW_DIALOG = encodeURIComponent('false');
 let STATE = '';
 let ACCESS_TOKEN = '';
 
@@ -20,14 +19,13 @@ const SPOTIFY_PLAYER_URL = "https://api.spotify.com/v1/me/player";
 function create_spotify_endpoint() {
     STATE = encodeURIComponent('meet' + Math.random().toString(36).substring(2, 15));
 
-    let oauth2_url = `${SPOTIFY_OAUTH2_URL}
-?client_id=${SPOTIFY_CLIENT_ID}
-&response_type=${RESPONSE_TYPE}
-&redirect_uri=${REDIRECT_URI}
-&state=${STATE}
-&scope=${SCOPE}
-&show_dialog=${SHOW_DIALOG}
-`;
+    let oauth2_url = SPOTIFY_OAUTH2_URL +
+    "?client_id=" + SPOTIFY_CLIENT_ID + 
+    "&response_type=" + RESPONSE_TYPE +
+    "&redirect_uri=" + REDIRECT_URI +
+    "&state=" + STATE +
+    "&scope=" + SCOPE +
+    "&show_dialog=" + SHOW_DIALOG;
 
     console.log(oauth2_url);
 
