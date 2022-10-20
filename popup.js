@@ -1,3 +1,4 @@
+// main
 document.addEventListener('DOMContentLoaded', function () {
     dumpSpotifyPlayers();
 });
@@ -71,7 +72,7 @@ function makeXhrRequest(method, url, token) {
 
 function dumpSpotifyPlayers(query) {
 
-    let oauth2_url = create_spotify_endpoint();
+    let oauth2_url = create_spotify_endpoint(); 
     chrome.identity.launchWebAuthFlow({
         url: oauth2_url,
         interactive: true
@@ -100,12 +101,15 @@ function dumpSpotifyPlayers(query) {
                     let token = ACCESS_TOKEN;
                     makeXhrRequest('GET', requestUrl, token)
                         .then((data) => {
+                            // parse the data from the request, into data variable
                             data = JSON.parse(data)
                             console.log(data)
-
+                            
+                            // use the data from the api call to display the images and add the links
                             document.getElementById("album-image").src = data.item.album.images[0].url;
                             document.getElementById('song-name').innerHTML = data.item.album.artists[0].name + " - " + data.item.name;
-
+                            
+                            // string manipulation to construct the correct url of the artist/song page
                             data.item.album.artists[0].namehyphen = data.item.album.artists[0].name.replace(/[^\w\s]/gi, '').replaceAll(' ', '-');
                             data.item.album.artists[0].namehyphen = data.item.album.artists[0].namehyphen.toLowerCase();
                             data.item.namehyphen = data.item.name.replace(/[^\w\s]/gi, '').replaceAll(' ', '-');
